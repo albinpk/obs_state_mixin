@@ -1,4 +1,8 @@
 name: ObsStateMixin
 
+repository: https://github.com/albinpk/obs_state_mixin
+
 packages:
   - packages/*
+
+sdkPath: .fvm/flutter_sdk
