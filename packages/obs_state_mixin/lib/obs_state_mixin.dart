@@ -1,7 +1,4 @@
 library obs_state_mixin;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/obs.dart';
+export 'src/obs_state_mixin.dart';
