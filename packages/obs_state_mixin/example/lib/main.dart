@@ -25,10 +25,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with ObsStateMixin {
-  /// Creates a new observable called _counter.
+  // Creates a new observable called _counter.
+  // This will automatically be disposed when the widget is disposed.
   late final _counter = obs(0);
 
-  /// Increments the value of _counter. No need to call setState().
+  // Increments the value of _counter. No need to call setState().
   void _incrementCounter() => _counter.value++;
 
   @override
