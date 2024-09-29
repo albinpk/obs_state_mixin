@@ -1,7 +1,12 @@
 name: obs_state_mixin
-description: "A new Flutter package project."
+
+description: "Lightweight Flutter package for reactive state management using Obs and ObsStateMixin."
+
 version: 0.0.1
-# homepage:
+
+homepage: https://github.com/albinpk/obs_state_mixin/tree/dev/packages/obs_state_mixin
+repository: https://github.com/albinpk/obs_state_mixin/tree/dev/packages/obs_state_mixin
+issue_tracker: https://github.com/albinpk/obs_state_mixin/issues
 
 environment:
   sdk: ^3.5.3
@@ -15,3 +20,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+
+topics:
+  - observable
+  - reactive
+  - state-management
+  - obs
+  - state-mixin
