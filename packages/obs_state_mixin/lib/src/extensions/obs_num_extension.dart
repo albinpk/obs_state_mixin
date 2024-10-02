@@ -360,7 +360,9 @@ extension ObsNumExtension on Obs<num> {
   /// result = (-10).clamp(-5, 5.0); // -5
   /// result = (-0.0).clamp(-5, 5.0); // -0.0
   /// ```
-  num clamp(num lowerLimit, num upperLimit) => value.clamp(lowerLimit, upperLimit);
+  num clamp(num lowerLimit, num upperLimit) {
+    return value.clamp(lowerLimit, upperLimit);
+  }
 
   /// Truncates this [num] to an integer and returns the result as an [int].
   ///
@@ -398,7 +400,9 @@ extension ObsNumExtension on Obs<num> {
   /// 10000000000000000.toStringAsFixed(4); // 10000000000000000.0000
   /// 5.25.toStringAsFixed(0); // 5
   /// ```
-  String toStringAsFixed(int fractionDigits) => value.toStringAsFixed(fractionDigits);
+  String toStringAsFixed(int fractionDigits) {
+    return value.toStringAsFixed(fractionDigits);
+  }
 
   /// An exponential string-representation of this number.
   ///
@@ -420,7 +424,9 @@ extension ObsNumExtension on Obs<num> {
   /// 123456.toStringAsExponential(3); // 1.235e+5
   /// 123.toStringAsExponential(0);    // 1e+2
   /// ```
-  String toStringAsExponential([int? fractionDigits]) => value.toStringAsExponential(fractionDigits);
+  String toStringAsExponential([int? fractionDigits]) {
+    return value.toStringAsExponential(fractionDigits);
+  }
 
   /// A string representation with [precision] significant digits.
   ///
@@ -442,5 +448,7 @@ extension ObsNumExtension on Obs<num> {
   /// 0.00000012345.toStringAsPrecision(15); // 1.23450000000000e-7
   /// 0.0000012345.toStringAsPrecision(15);  // 0.00000123450000000000
   /// ```
-  String toStringAsPrecision(int precision) => value.toStringAsPrecision(precision);
+  String toStringAsPrecision(int precision) {
+    return value.toStringAsPrecision(precision);
+  }
 }

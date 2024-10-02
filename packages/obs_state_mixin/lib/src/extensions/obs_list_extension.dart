@@ -212,7 +212,9 @@ extension ObsListExtension<E> on Obs<List<E>> {
   /// final notes = <String>['do', 're', 'mi', 're'];
   /// final index = notes.indexWhere((note) => note.startsWith('k')); // -1
   /// ```
-  int indexWhere(bool Function(E element) test, [int start = 0]) => value.indexWhere(test, start);
+  int indexWhere(bool Function(E element) test, [int start = 0]) {
+    return value.indexWhere(test, start);
+  }
 
   /// The last index in the list that satisfies the provided [test].
   ///
@@ -234,7 +236,9 @@ extension ObsListExtension<E> on Obs<List<E>> {
   /// final index = notes.lastIndexWhere((note) => note.startsWith('k'));
   /// print(index); // -1
   /// ```
-  int lastIndexWhere(bool Function(E element) test, [int? start]) => value.lastIndexWhere(test, start);
+  int lastIndexWhere(bool Function(E element) test, [int? start]) {
+    return value.lastIndexWhere(test, start);
+  }
 
   /// The last index of [element] in this list.
   ///
@@ -301,7 +305,9 @@ extension ObsListExtension<E> on Obs<List<E>> {
   /// numbers.insertAll(2, insertItems);
   /// print(numbers); // [1, 2, 10, 11, 3, 4]
   /// ```
-  void insertAll(int index, Iterable<E> iterable) => value.insertAll(index, iterable);
+  void insertAll(int index, Iterable<E> iterable) {
+    value.insertAll(index, iterable);
+  }
 
   /// Overwrites elements with the objects of [iterable].
   ///
@@ -473,7 +479,9 @@ extension ObsListExtension<E> on Obs<List<E>> {
   ///
   /// If `iterable` depends on this list in some other way, no guarantees are
   /// made.
-  void setRange(int start, int end, Iterable<E> iterable, [int skipCount = 0]) => value.setRange(start, end, iterable, skipCount);
+  void setRange(int start, int end, Iterable<E> iterable, [int skipCount = 0]) {
+    value.setRange(start, end, iterable, skipCount);
+  }
 
   /// Removes a range of elements from the list.
   ///
@@ -512,7 +520,9 @@ extension ObsListExtension<E> on Obs<List<E>> {
   /// words.fillRange(1, 3, 'new');
   /// print(words); // [old, new, new, old, old]
   /// ```
-  void fillRange(int start, int end, [E? fillValue]) => value.fillRange(start, end, fillValue);
+  void fillRange(int start, int end, [E? fillValue]) {
+    value.fillRange(start, end, fillValue);
+  }
 
   /// Replaces a range of elements with the elements of [replacements].
   ///
@@ -543,7 +553,9 @@ extension ObsListExtension<E> on Obs<List<E>> {
   /// This method does not work on fixed-length lists, even when [replacements]
   /// has the same number of elements as the replaced range. In that case use
   /// [setRange] instead.
-  void replaceRange(int start, int end, Iterable<E> replacements) => value.replaceRange(start, end, replacements);
+  void replaceRange(int start, int end, Iterable<E> replacements) {
+    value.replaceRange(start, end, replacements);
+  }
 
   /// An unmodifiable [Map] view of this list.
   ///

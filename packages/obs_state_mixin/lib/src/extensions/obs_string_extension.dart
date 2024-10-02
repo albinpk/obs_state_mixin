@@ -94,7 +94,9 @@ extension ObsStringExtension on Obs<String> {
   /// print(string.startsWith(RegExp(r'^art'), 1)); // false
   /// print(string.startsWith(RegExp(r'art'), 1)); // true
   /// ```
-  bool startsWith(Pattern pattern, [int index = 0]) => value.startsWith(pattern, index);
+  bool startsWith(Pattern pattern, [int index = 0]) {
+    return value.startsWith(pattern, index);
+  }
 
   /// Returns the position of the first match of [pattern] in this string,
   /// starting at [start], inclusive:
@@ -109,7 +111,9 @@ extension ObsStringExtension on Obs<String> {
   /// string.indexOf(RegExp(r'dart')); // -1
   /// ```
   /// The [start] must be non-negative and not greater than [length].
-  int indexOf(Pattern pattern, [int start = 0]) => value.indexOf(pattern, start);
+  int indexOf(Pattern pattern, [int start = 0]) {
+    return value.indexOf(pattern, start);
+  }
 
   /// The starting position of the last match [pattern] in this string.
   ///
@@ -126,7 +130,9 @@ extension ObsStringExtension on Obs<String> {
   /// ```
   /// If [start] is omitted, search starts from the end of the string.
   /// If supplied, [start] must be non-negative and not greater than [length].
-  int lastIndexOf(Pattern pattern, [int? start]) => value.lastIndexOf(pattern, start);
+  int lastIndexOf(Pattern pattern, [int? start]) {
+    return value.lastIndexOf(pattern, start);
+  }
 
   /// Whether this string is empty.
   bool get isEmpty => value.isEmpty;
@@ -247,7 +253,9 @@ extension ObsStringExtension on Obs<String> {
   /// `"&nbsp;"` or `"\u{10002}`".
   /// In that case, the user should make sure that `this.length` is
   /// the correct measure of the string's length.
-  String padLeft(int width, [String padding = ' ']) => value.padLeft(width, padding);
+  String padLeft(int width, [String padding = ' ']) {
+    return value.padLeft(width, padding);
+  }
 
   /// Pads this string on the right if it is shorter than [width].
   ///
@@ -271,7 +279,9 @@ extension ObsStringExtension on Obs<String> {
   /// `"&nbsp;"` or `"\u{10002}`".
   /// In that case, the user should make sure that `this.length` is
   /// the correct measure of the string's length.
-  String padRight(int width, [String padding = ' ']) => value.padRight(width, padding);
+  String padRight(int width, [String padding = ' ']) {
+    return value.padRight(width, padding);
+  }
 
   /// Whether this string contains a match of [other].
   ///
@@ -289,7 +299,9 @@ extension ObsStringExtension on Obs<String> {
   /// final caseSensitive = string.contains(RegExp(r'[A-Z]'), 1); // false
   /// ```
   /// The [startIndex] must not be negative or greater than [length].
-  bool contains(Pattern other, [int startIndex = 0]) => value.contains(other, startIndex);
+  bool contains(Pattern other, [int startIndex = 0]) {
+    return value.contains(other, startIndex);
+  }
 
   /// Creates a new string with the first occurrence of [from] replaced by [to].
   ///
@@ -301,7 +313,9 @@ extension ObsStringExtension on Obs<String> {
   /// '0.0001'.replaceFirst(RegExp(r'0'), ''); // '.0001'
   /// '0.0001'.replaceFirst(RegExp(r'0'), '7', 1); // '0.7001'
   /// ```
-  String replaceFirst(Pattern from, String to, [int startIndex = 0]) => value.replaceFirst(from, to, startIndex);
+  String replaceFirst(Pattern from, String to, [int startIndex = 0]) {
+    return value.replaceFirst(from, to, startIndex);
+  }
 
   /// Replace the first occurrence of [from] in this string.
   ///
@@ -319,8 +333,13 @@ extension ObsStringExtension on Obs<String> {
   /// is replaced by the result of calling [replace] with the match object.
   ///
   /// The [startIndex] must be non-negative and no greater than [length].
-  String replaceFirstMapped(Pattern from, String Function(Match match) replace, [int startIndex = 0]) =>
-      value.replaceFirstMapped(from, replace, startIndex);
+  String replaceFirstMapped(
+    Pattern from,
+    String Function(Match match) replace, [
+    int startIndex = 0,
+  ]) {
+    return value.replaceFirstMapped(from, replace, startIndex);
+  }
 
   /// Replaces all substrings that match [from] with [replace].
   ///
@@ -333,7 +352,9 @@ extension ObsStringExtension on Obs<String> {
   /// Notice that the [replace] string is not interpreted. If the replacement
   /// depends on the match (for example, on a [RegExp]'s capture groups), use
   /// the [replaceAllMapped] method instead.
-  String replaceAll(Pattern from, String replace) => value.replaceAll(from, replace);
+  String replaceAll(Pattern from, String replace) {
+    return value.replaceAll(from, replace);
+  }
 
   /// Replace all substrings that match [from] by a computed string.
   ///
@@ -357,7 +378,9 @@ extension ObsStringExtension on Obs<String> {
   /// final result = pigLatin('I have a secret now!');
   /// print(result); // 'Iway avehay away ecretsay ownay!'
   /// ```
-  String replaceAllMapped(Pattern from, String Function(Match match) replace) => value.replaceAllMapped(from, replace);
+  String replaceAllMapped(Pattern from, String Function(Match match) replace) {
+    return value.replaceAllMapped(from, replace);
+  }
 
   /// Replaces the substring from [start] to [end] with [replacement].
   ///
@@ -374,7 +397,9 @@ extension ObsStringExtension on Obs<String> {
   /// The [start] and [end] indices must specify a valid range of this string.
   /// That is `0 <= start <= end <= this.length`.
   /// If [end] is `null`, it defaults to [length].
-  String replaceRange(int start, int? end, String replacement) => value.replaceRange(start, end, replacement);
+  String replaceRange(int start, int? end, String replacement) {
+    return value.replaceRange(start, end, replacement);
+  }
 
   /// Splits the string at matches of [pattern] and returns a list of substrings.
   ///
@@ -490,8 +515,17 @@ extension ObsStringExtension on Obs<String> {
   ///     onNonMatch: (n) => '*');
   /// print(result); // *shoots*
   /// ```
-  String splitMapJoin(Pattern pattern, {String Function(Match)? onMatch, String Function(String)? onNonMatch}) =>
-      value.splitMapJoin(pattern, onMatch: onMatch, onNonMatch: onNonMatch);
+  String splitMapJoin(
+    Pattern pattern, {
+    String Function(Match)? onMatch,
+    String Function(String)? onNonMatch,
+  }) {
+    return value.splitMapJoin(
+      pattern,
+      onMatch: onMatch,
+      onNonMatch: onNonMatch,
+    );
+  }
 
   /// An unmodifiable list of the UTF-16 code units of this string.
   List<int> get codeUnits => value.codeUnits;

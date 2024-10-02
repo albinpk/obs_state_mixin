@@ -74,7 +74,8 @@ class _AutoDisposeTestWidget extends StatefulWidget {
   State<_AutoDisposeTestWidget> createState() => _AutoDisposeTestWidgetState();
 }
 
-class _AutoDisposeTestWidgetState extends State<_AutoDisposeTestWidget> with ObsStateMixin {
+class _AutoDisposeTestWidgetState extends State<_AutoDisposeTestWidget>
+    with ObsStateMixin {
   late final counter = obs(0);
 
   @override
