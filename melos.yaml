@@ -6,3 +6,9 @@ packages:
   - packages/*
 
 sdkPath: .fvm/flutter_sdk
+
+command:
+  version:
+    hooks:
+      # Update the version in readme
+      preCommit: bash -c "$(curl -s https://raw.githubusercontent.com/albinpk/flutter_cora/dfa73ec4f1dc73e5bc6056177f8111268d805278/scripts/preVersion.sh)"
