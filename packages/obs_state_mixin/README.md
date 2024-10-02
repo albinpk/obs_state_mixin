@@ -1,5 +1,12 @@
 # obs_state_mixin
 
+[![deploy](https://github.com/albinpk/obs_state_mixin/actions/workflows/deploy.yml/badge.svg)](https://github.com/albinpk/obs_state_mixin/actions/workflows/deploy.yml)
+[![codecov](https://codecov.io/github/albinpk/obs_state_mixin/graph/badge.svg?token=6OY333UOTH)](https://codecov.io/github/albinpk/obs_state_mixin)
+[![Pub Version](https://img.shields.io/pub/v/obs_state_mixin)](https://pub.dev/packages/obs_state_mixin)
+[![GitHub License](https://img.shields.io/github/license/albinpk/obs_state_mixin)](https://github.com/albinpk/obs_state_mixin/blob/dev/LICENSE)
+![GitHub last commit](https://img.shields.io/github/last-commit/albinpk/obs_state_mixin)
+[![Pub Points](https://img.shields.io/pub/points/obs_state_mixin)](https://pub.dev/packages/obs_state_mixin/score)
+
 **obs_state_mixin** is a lightweight Flutter package for reactive state management. It provides an Obs class for observable values and `ObsStateMixin` to simplify automatic UI updates and resource cleanup in `StatefulWidget`.
 
 ## Features
