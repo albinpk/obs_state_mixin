@@ -1,0 +1,13 @@
+name: deploy
+
+on:
+  push:
+    tags:
+      - "obs_state_mixin-v[0-9]+.[0-9]+.[0-9]+*"
+
+jobs:
+  publish:
+    uses: albinpk/flutter_cora/.github/workflows/publish.yml@7213d18976a22b6ae42b5708f0c5cdad504a69de
+    secrets: inherit
+    with:
+      working-directory: packages/obs_state_mixin
