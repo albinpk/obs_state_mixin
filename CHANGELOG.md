@@ -15,6 +15,28 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`obs_state_mixin` - `v0.0.1-dev.3`](#obs_state_mixin---v001-dev3)
+
+---
+
+#### `obs_state_mixin` - `v0.0.1-dev.3`
+
+ - **FEAT**: add `refresh` method in `Obs`. ([7b452f42](https://github.com/albinpk/obs_state_mixin/commit/7b452f429ed93b322212483994a1f1ca8d4f177b))
+ - **DOCS**: add badges to readme file. ([0ce39534](https://github.com/albinpk/obs_state_mixin/commit/0ce39534caf7e4721530fb619459744821444c6b))
+
+
+## 2024-10-02
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`obs_state_mixin` - `v0.0.1-dev.2`](#obs_state_mixin---v001-dev2)
 
 ---
