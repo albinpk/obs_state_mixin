@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-10-02
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`obs_state_mixin` - `v0.0.1-dev.2`](#obs_state_mixin---v001-dev2)
+
+---
+
+#### `obs_state_mixin` - `v0.0.1-dev.2`
+
+ - **FEAT**: create extensions for `Obs<bool>`, `Obs<List>`, `Obs<num>` and `Obs<String>`. ([ba49f187](https://github.com/albinpk/obs_state_mixin/commit/ba49f187b6874e2a728a36f1345572201eba988d))
+
+
 ## 2024-09-29
 
 ### Changes
