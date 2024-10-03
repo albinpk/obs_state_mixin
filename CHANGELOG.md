@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-10-03
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`obs_state_mixin` - `v0.0.1-dev.4`](#obs_state_mixin---v001-dev4)
+
+---
+
+#### `obs_state_mixin` - `v0.0.1-dev.4`
+
+ - **FIX**: create extensions for `Obs<Iterable>`. ([0b3c3174](https://github.com/albinpk/obs_state_mixin/commit/0b3c3174df821fef04e0ecc44dc7749ff560d396))
+
+
 ## 2024-10-02
 
 ### Changes

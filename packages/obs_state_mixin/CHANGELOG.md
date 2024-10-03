@@ -1,3 +1,7 @@
+## 0.0.1-dev.4
+
+ - **FIX**: create extensions for `Obs<Iterable>`. ([0b3c3174](https://github.com/albinpk/obs_state_mixin/commit/0b3c3174df821fef04e0ecc44dc7749ff560d396))
+
 ## 0.0.1-dev.3
 
  - **FEAT**: add `refresh` method in `Obs`. ([7b452f42](https://github.com/albinpk/obs_state_mixin/commit/7b452f429ed93b322212483994a1f1ca8d4f177b))
