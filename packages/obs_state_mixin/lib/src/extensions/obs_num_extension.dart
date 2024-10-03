@@ -1,3 +1,8 @@
+// coverage:ignore-file
+
+// Unit testing is not implemented for this file because
+// this is an extension that redirects to the actual num class.
+
 import '../obs.dart';
 
 /// Extensions for [Obs]s of type [num].

@@ -1,3 +1,8 @@
+// coverage:ignore-file
+
+// Unit testing is not implemented for this file because
+// this is an extension that redirects to the actual List class.
+
 import 'dart:math';
 
 import '../obs.dart';
@@ -40,6 +45,13 @@ extension ObsListExtension<E> on Obs<List<E>> {
     this.value[index] = value;
   }
 
+  /// The first element.
+  ///
+  /// Throws a [StateError] if `this` is empty.
+  /// Otherwise returns the first element in the iteration order,
+  /// equivalent to `this.elementAt(0)`.
+  E get first => value.first;
+
   /// The first element of the list.
   ///
   /// The list must be non-empty when accessing its first element.
@@ -57,6 +69,16 @@ extension ObsListExtension<E> on Obs<List<E>> {
   /// numbers.first; // Throws.
   /// ```
   set first(E value) => this.value.first = value;
+
+  /// The last element.
+  ///
+  /// Throws a [StateError] if `this` is empty.
+  /// Otherwise may iterate through the elements and returns the last one
+  /// seen.
+  /// Some iterables may have more efficient ways to find the last element
+  /// (for example a list can directly access the last element,
+  /// without iterating through the previous ones).
+  E get last => value.last;
 
   /// The last element of the list.
   ///
