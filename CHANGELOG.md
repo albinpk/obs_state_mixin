@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-10-05
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`obs_state_mixin` - `v0.0.1-dev.5`](#obs_state_mixin---v001-dev5)
+
+---
+
+#### `obs_state_mixin` - `v0.0.1-dev.5`
+
+ - **FIX**: add nonVirtual annotation to `obs` method. ([e32f02e0](https://github.com/albinpk/obs_state_mixin/commit/e32f02e0c7226206d8277bf3b548bc557aa30aec))
+
+
 ## 2024-10-03
 
 ### Changes

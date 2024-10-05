@@ -1,3 +1,7 @@
+## 0.0.1-dev.5
+
+ - **FIX**: add nonVirtual annotation to `obs` method. ([e32f02e0](https://github.com/albinpk/obs_state_mixin/commit/e32f02e0c7226206d8277bf3b548bc557aa30aec))
+
 ## 0.0.1-dev.4
 
  - **FIX**: create extensions for `Obs<Iterable>`. ([0b3c3174](https://github.com/albinpk/obs_state_mixin/commit/0b3c3174df821fef04e0ecc44dc7749ff560d396))
