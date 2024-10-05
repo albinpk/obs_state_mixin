@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import 'obs.dart';
@@ -17,6 +18,7 @@ mixin ObsStateMixin<T extends StatefulWidget> on State<T> {
   /// Creates a new [Obs] and listens to it.
   ///
   /// When the [Obs] is updated, calls [setState] on the [State].
+  @nonVirtual
   Obs<V> obs<V>(V value) {
     final notifier = Obs<V>(value)..addListener(() => setState(() {}));
     _addToDisposers(notifier.dispose);
