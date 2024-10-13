@@ -7,6 +7,13 @@ void main() {
     setUp(() => obs = Obs<int>(0));
     tearDown(() => obs.dispose());
 
+    test('setValue method', () {
+      obs.setValue(1);
+      expect(obs.value, 1);
+      obs.setValue(-1);
+      expect(obs.value, -1);
+    });
+
     test('refresh method', () {
       int calls = 0;
       obs.addListener(() => calls++);
