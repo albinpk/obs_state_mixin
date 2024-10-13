@@ -9,11 +9,20 @@ import 'obs.dart';
 mixin ObsStateMixin<T extends StatefulWidget> on State<T> {
   final _disposers = <VoidCallback>[];
 
-  /// Disposes the [VoidCallback].
+  /// Calls [fn] when the widget is disposed.
   ///
-  /// Add the [VoidCallback] to the list of callbacks to be executed when
-  /// [dispose] is called.
-  void _addToDisposers(VoidCallback fn) => _disposers.add(fn);
+  /// Example:
+  ///
+  /// ```dart
+  /// @override
+  /// void initState() {
+  ///   super.initState();
+  ///   final subscription = _stream.listen(_onChange);
+  ///   onDispose(subscription.cancel);
+  /// }
+  /// ```
+  @nonVirtual
+  void onDispose(VoidCallback fn) => _disposers.add(fn);
 
   /// Creates a new [Obs] and listens to it.
   ///
@@ -21,7 +30,7 @@ mixin ObsStateMixin<T extends StatefulWidget> on State<T> {
   @nonVirtual
   Obs<V> obs<V>(V value) {
     final notifier = Obs<V>(value)..addListener(() => setState(() {}));
-    _addToDisposers(notifier.dispose);
+    onDispose(notifier.dispose);
     return notifier;
   }
 
