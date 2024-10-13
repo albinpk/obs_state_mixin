@@ -39,9 +39,19 @@ class Obs<T> extends ValueNotifier<T> {
   void setValue(T newValue) => value = newValue;
 
   /// Notifies listeners that the value has changed.
+  ///
+  /// This is useful when you want to update a mutable [Obs].
+  ///
+  /// eg.
+  ///
+  /// ```dart
+  /// final list = Obs<List<int>>([1, 2, 3]);
+  /// list.add(4); // listeners will not be notified
+  /// list.refresh(); // listeners will be notified
+  /// ```
   void refresh() => notifyListeners();
 
-  /// A string representation of the [Obs].
+  /// A string representation of the [value].
   @override
   String toString() => value.toString();
 }
