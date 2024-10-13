@@ -22,7 +22,7 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: _AutoDisposeTestWidget(
-          fn: (Obs<int> value) {
+          getObs: (Obs<int> value) {
             obs = value;
           },
         ),
@@ -36,6 +36,28 @@ void main() {
 
     // updating the obs value will throw, since the widget has been disposed
     expect(() => obs.value++, throwsFlutterError);
+  });
+
+  testWidgets('onDispose method', (tester) async {
+    int count1 = 0;
+
+    await tester.pumpWidget(
+      MaterialApp(
+        home: _AutoDisposeTestWidget(
+          getOnDispose: (onDispose) {
+            onDispose(() => count1++);
+            onDispose(() => count1++);
+          },
+        ),
+      ),
+    );
+
+    expect(count1, 0);
+
+    // disposing the previous widget, it also disposes the obs
+    await tester.pumpWidget(const SizedBox());
+
+    expect(count1, 2);
   });
 }
 
@@ -66,9 +88,13 @@ class _TestWidgetState extends State<_TestWidget> with ObsStateMixin {
 }
 
 class _AutoDisposeTestWidget extends StatefulWidget {
-  const _AutoDisposeTestWidget({required this.fn});
+  const _AutoDisposeTestWidget({
+    this.getObs,
+    this.getOnDispose,
+  });
 
-  final void Function(Obs<int> obs) fn;
+  final void Function(Obs<int> obs)? getObs;
+  final void Function(void Function(VoidCallback fn) onDispose)? getOnDispose;
 
   @override
   State<_AutoDisposeTestWidget> createState() => _AutoDisposeTestWidgetState();
@@ -81,7 +107,8 @@ class _AutoDisposeTestWidgetState extends State<_AutoDisposeTestWidget>
   @override
   void initState() {
     super.initState();
-    widget.fn(counter);
+    widget.getObs?.call(counter);
+    widget.getOnDispose?.call(onDispose);
   }
 
   @override
