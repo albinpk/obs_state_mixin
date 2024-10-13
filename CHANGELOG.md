@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-10-13
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`obs_state_mixin` - `v0.0.1-dev.6`](#obs_state_mixin---v001-dev6)
+
+---
+
+#### `obs_state_mixin` - `v0.0.1-dev.6`
+
+ - **FEAT**: create `setValue` method in `Obs`. ([d867de57](https://github.com/albinpk/obs_state_mixin/commit/d867de57e74eb1dc86f3f348bd7505f86f1505ae))
+ - **FEAT**: make `ObsStateMixin.onDispose` method public. ([40d3215d](https://github.com/albinpk/obs_state_mixin/commit/40d3215d6adec37df6701861dc80f79b6dc09746))
+ - **DOCS**: update documentation for `refresh` method. ([34ab48c3](https://github.com/albinpk/obs_state_mixin/commit/34ab48c38f6f729f5cbc15c52f58d553d69c86b4))
+
+
 ## 2024-10-05
 
 ### Changes

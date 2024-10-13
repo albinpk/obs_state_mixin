@@ -1,3 +1,9 @@
+## 0.0.1-dev.6
+
+ - **FEAT**: create `setValue` method in `Obs`. ([d867de57](https://github.com/albinpk/obs_state_mixin/commit/d867de57e74eb1dc86f3f348bd7505f86f1505ae))
+ - **FEAT**: make `ObsStateMixin.onDispose` method public. ([40d3215d](https://github.com/albinpk/obs_state_mixin/commit/40d3215d6adec37df6701861dc80f79b6dc09746))
+ - **DOCS**: update documentation for `refresh` method. ([34ab48c3](https://github.com/albinpk/obs_state_mixin/commit/34ab48c38f6f729f5cbc15c52f58d553d69c86b4))
+
 ## 0.0.1-dev.5
 
  - **FIX**: add nonVirtual annotation to `obs` method. ([e32f02e0](https://github.com/albinpk/obs_state_mixin/commit/e32f02e0c7226206d8277bf3b548bc557aa30aec))
