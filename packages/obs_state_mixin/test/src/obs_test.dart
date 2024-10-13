@@ -23,5 +23,9 @@ void main() {
 
       expect(calls, 2);
     });
+
+    test('toString method', () {
+      expect(obs.toString(), obs.value.toString());
+    });
   });
 }
