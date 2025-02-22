@@ -1,3 +1,7 @@
+## 0.0.1-dev.7
+
+ - **REFACTOR**: update flutter_lints dependency to version 5.0.0. ([69054118](https://github.com/albinpk/obs_state_mixin/commit/69054118998ccae79d2897a453ccd435de015788))
+
 ## 0.0.1-dev.6
 
  - **FEAT**: create `setValue` method in `Obs`. ([d867de57](https://github.com/albinpk/obs_state_mixin/commit/d867de57e74eb1dc86f3f348bd7505f86f1505ae))

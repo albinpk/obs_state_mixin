@@ -21,7 +21,7 @@ Add the package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  obs_state_mixin: ^0.0.1-dev.6
+  obs_state_mixin: ^0.0.1-dev.7
 ```
 
 Run `flutter pub get` to fetch the package.
