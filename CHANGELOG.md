@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025-03-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`obs_state_mixin` - `v0.0.1-dev.8`](#obs_state_mixin---v001-dev8)
+
+---
+
+#### `obs_state_mixin` - `v0.0.1-dev.8`
+
+ - **FIX**: update flutter_lints dependency to version 5.0.0 in example project. ([30a7eb92](https://github.com/albinpk/obs_state_mixin/commit/30a7eb92aa4448b46a16505745c8403a68b99d82))
+
+
 ## 2025-02-22
 
 ### Changes

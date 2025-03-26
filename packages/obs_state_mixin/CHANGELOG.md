@@ -1,3 +1,7 @@
+## 0.0.1-dev.8
+
+ - **FIX**: update flutter_lints dependency to version 5.0.0 in example project. ([30a7eb92](https://github.com/albinpk/obs_state_mixin/commit/30a7eb92aa4448b46a16505745c8403a68b99d82))
+
 ## 0.0.1-dev.7
 
  - **REFACTOR**: update flutter_lints dependency to version 5.0.0. ([69054118](https://github.com/albinpk/obs_state_mixin/commit/69054118998ccae79d2897a453ccd435de015788))
